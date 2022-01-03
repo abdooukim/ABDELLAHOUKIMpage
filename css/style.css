@@ -1,0 +1,655 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+    scroll-behavior: smooth; 
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+a , a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+:root {
+    --mainColor : #FECD45 ;
+    --secondColor : #2568FB ;
+    --Color : #514F4C ;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--mainColor);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--secondColor);
+}
+
+@media (min-width : 1400px) {
+    .container {
+        width: 70%;
+    }
+}
+
+/* Nav-bar */
+
+nav {
+    width: 100%;
+    background-color: var(--mainColor);
+    position: fixed;
+    z-index: 500;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .container .Logo {
+    font-weight: 700;
+    color: var(--Color);
+    cursor: pointer;
+}
+
+nav .container .Logo span {
+    color: var(--secondColor);
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+nav .container ul {
+    display: flex;
+    align-items: center;
+}
+
+nav .container ul li {
+    padding: 20px 15px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+nav .container ul li a:hover {
+    color: var(--Color) ;
+}
+
+nav .container .Bar-content {
+    display: none;
+}
+
+nav .container .Bar {
+    padding: 17px 0;
+    font-size: 25px;
+}
+
+nav .container .Bar-content .Drop-ul {
+    min-height: 100px;
+    width: 100%;
+    background-color: var(--mainColor);
+    position: absolute;
+    left: 0;
+    top: 58px;
+    z-index: 100;
+    color: var(--Color);
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+nav .container .Bar-content .Drop-ul li {
+    height: 20%;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+}
+
+nav .container .Bar-content .Drop-ul li:hover {
+    background-color: var(--secondColor);
+    color: var(--mainColor);
+}
+
+nav .container .Bar-content:hover .Drop-ul {
+    display: flex;
+}
+
+@media (max-width : 600px) {
+    nav .container ul {
+        display: none;
+    }
+    nav .container .Bar-content {
+        display: block;
+    }
+}
+
+/* About  */
+
+.About {
+    min-height: 100vh  ;
+    background-image: url(../images/mypic.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 100;
+    position: relative;
+}
+
+.About::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.637) ;
+    z-index: -1;
+}
+
+.About .container {
+    width: 40%;
+    text-align: center;
+}
+
+.About .container h1 {
+    margin: 0;
+    padding: 100px 0 40px 0;
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: var(--mainColor);
+}
+
+.About .container p {
+   line-height: 2;
+   font-size: 20px;
+   font-weight: normal;
+   color: white;
+   word-spacing: 4px;
+}
+
+.About .container #show-more {
+    display: none;
+}
+
+.About .container button {
+    margin: 20px 0;
+    padding: 14px;
+    border: none;
+    outline: none;
+    background-color: var(--mainColor);
+    color: var(--secondColor);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.About .container button:hover {
+    background-color: var(--secondColor);
+    color: var(--mainColor);
+}
+
+.About .container .Icons {
+    margin-top: 20px;
+}
+
+.About .container .Icons i {
+    font-size: 40px;
+    color: var(--mainColor);
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.About .container .Icons i:hover {
+    color: var(--secondColor);
+}
+
+@media (max-width : 600px) {
+    .About .container {
+        width: 85%;
+        font-size: 0.9rem;
+    }
+    .About .container p  {
+        word-spacing: 0;
+    }
+}
+
+/* Skills  */
+
+.Skills {
+    min-height: 400px;
+    width: 100%;
+    background-color: var(--mainColor);
+    padding-bottom: 40px;
+}
+
+.Skills .Heading {
+    text-align: center;
+    margin: 0;
+    padding: 30px 0;
+    color: var(--secondColor);
+    font-weight: 600;
+}
+
+.Skills .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Skills .container > div {
+    width: 48%;
+}
+
+.Skills .container .Text h3 {
+    padding: 40px 0;
+}
+
+.Skills .container .Text p {
+    line-height: 2;
+}
+
+.Skills .container  .Skills-side {
+    padding-top: 40px;
+    overflow: hidden;
+}
+
+.Skills .container  .Skills-side label {
+    padding: 10px 0;
+    font-weight: normal;
+    font-size: 20px;
+    color: var(--secondColor);
+}
+
+.Skills .container  .Skills-side  div {
+    width: 90%;
+    margin: 15px 0;
+    height: 30px;
+    background-color: #EEE;
+}
+
+.Skills .container  .Skills-side  div > div {
+    height: 100%;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: white;
+    background-color: var(--secondColor);
+}
+
+.to-top {
+    font-size: 30px;
+    color: var(--secondColor);
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    opacity: 0.7;
+    transition: 0.3s;
+    z-index: 99;
+}
+
+.to-top:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@media (max-width : 880px) {
+    .Skills .container > div {
+        width: 100%;
+    }
+    .Skills .container  .Skills-side  div > div {
+        font-size: 0.5;
+    }
+}
+
+@media (max-width : 600px) {
+    .to-top {
+        right: 4px;
+    }
+}
+
+/* Services  */
+
+.Services {
+    min-height: 400px;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.Services .Heading {
+    text-align: center;
+    margin: 0;
+    padding: 30px 0;
+    color: var(--secondColor);
+    font-weight: 600;
+}
+
+.Services .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Services .container > div {
+    margin-top: 40px;
+    min-height: 300px;
+    width: 30%;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Services .container > div:hover {
+    transform: scale(1.05);
+}
+
+.Services .container > div i {
+    padding-top: 10px;
+    font-size: 80px;
+    color: var(--secondColor);
+}
+
+.Services .container > div h2 {
+    padding: 10px ;
+    font-weight: normal;
+    color: var(--secondColor);
+}
+
+.Services .container > div p {
+    line-height: 2;
+    padding: 10px;
+    color: var(--Color);
+}
+
+.Services .container > div button {
+    margin: 10px 0;
+    padding: 14px;
+    border: none;
+    outline: none;
+    background-color: var(--mainColor);
+    color: var(--secondColor);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.Services .container > div button:hover {
+    background-color: var(--secondColor);
+    color: var(--mainColor);
+}
+
+.Services .container > div #btn-disable {
+    margin: 10px 0;
+    padding: 14px;
+    border: none;
+    outline: none;
+    background-color: #fecd4581 ;
+    color: var(--secondColor);
+    font-weight: bold;
+    cursor: not-allowed;
+}
+@media (max-width : 910px ) {
+    .Services .container > div {
+        width: 48%;
+    }
+}
+
+@media (max-width : 575px ) {
+    .Services .container > div {
+        width: 100%;
+    }
+}
+
+.Projects {
+    min-height: 500px;
+    width: 100%;
+    background-color: #EEE;
+    padding-bottom: 40px;
+}
+
+.Projects .Heading {
+    text-align: center;
+    margin: 0;
+    padding: 30px 0;
+    color: var(--secondColor);
+    font-weight: 600;
+}
+
+.Projects .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Projects .container > div {
+    min-height: 450px;
+    margin-top: 20px;
+    text-align: center;
+    width: 30%;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.Projects .container > div .Img {
+    height: 50%;
+    width: 100%; 
+    overflow: hidden;
+}
+
+.Projects .container > div .Img img {
+    height: 100%;
+    width: 100%;
+    transition: 0.4s;
+}
+
+.Projects .container > div:hover img {
+    transform: scale(1.1) ;
+}
+
+.Projects .container > div h3 {
+    text-align: center;
+    color: var(--secondColor);
+    padding: 10px ;
+}
+
+.Projects .container > div p {
+    text-align: center;
+    line-height: 1.5;
+    padding: 5px;
+}
+
+.Projects .container > div button {
+    margin: 12px 0;
+    padding: 14px;
+    border: none;
+    outline: none;
+    background-color: var(--mainColor);
+    color: var(--secondColor);
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.Projects .container > div .msg , #msg {
+    color: red;
+    display: none;
+}
+
+.Projects .container > div  button:hover {
+    background-color: var(--secondColor);
+    color: var(--mainColor);
+}
+
+@media (max-width : 950px) {
+    .Projects .container > div {
+        width: 48%;
+    }
+}
+
+@media (max-width : 600px) {
+    .Projects .container > div {
+        width: 100%;
+    }
+}
+
+/* Contact  */
+
+.Contact {
+    min-height: 400px;
+    width: 100%;
+    background-color: #FFF;
+    padding-bottom: 60px;
+    overflow: hidden;
+}
+
+.Contact .Heading {
+    text-align: center;
+    margin: 0;
+    padding: 30px 0;
+    color: var(--secondColor);
+    font-weight: 600;
+}
+
+
+.Contact #Work-text {
+    text-align: center;
+    margin: 0;
+    padding: 15px 0;
+    color: var(--secondColor);
+    font-weight: bold;
+    display: none;
+}
+
+
+.Contact .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Contact .container > div {
+    margin-top: 20px;
+    min-height: 200px;
+    word-break: break-all;
+    width: 30%;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Contact .container > div:hover {
+    transform: scale(1.05);
+}
+
+.Contact .container > div i {
+    padding-top: 10px;
+    font-size: 80px;
+    color: var(--secondColor);
+}
+
+.Contact .container > div h2 {
+    padding: 10px ;
+    font-weight: normal;
+    color: var(--secondColor);
+}
+
+.Contact .container > div p {
+    line-height: 2;
+    padding: 10px;
+    color: var(--Color);
+}
+
+.Contact .container > div button {
+    margin: 10px 0;
+    padding: 14px;
+    color: #FFF;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.4s;
+}
+
+.Contact .container > div button:hover {
+    opacity: 1;
+}
+
+.Contact .container > div #telbtn {
+    background-color: var(--secondColor);
+}
+
+.Contact .container > div #emlbtn {
+    background-color: #C5221E;
+}
+
+.Contact .container > div #wtsbtn {
+    background-color: green;
+}
+
+@media (max-width : 910px ) {
+    .Contact .container > div {
+        width: 48%;
+    }
+}
+
+@media (max-width : 575px ) {
+    .Contact .container > div {
+        width: 100%;
+    }
+}
+
+/* footer  */
+
+footer {
+    height: 80px;
+    width: 100%;
+    background-image: url(../images/footer.jpg);
+    background-size: cover;
+    background-position: bottom;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+}
+
+footer::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.123) ;
+    z-index: -1;
+}
+
+footer .container {
+    height: 100%;
+    display: flex;
+}
+
+footer .container p {
+    margin: auto;
+}
