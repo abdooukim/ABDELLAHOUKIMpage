@@ -8,7 +8,7 @@ let projBtn3 = document.getElementById('btn-project3')
 let msg3 = document.getElementById("msg3") ;
 let servBtn = document.getElementById("Getbtn") ;
 let workPara = document.getElementById("Work-text") ;
-
+let toTop  = document.getElementById("to-top")
 
 // Show more
 function showMore() {
@@ -45,6 +45,21 @@ projBtn3.onclick =()=> {
 servBtn.onclick =()=> {
     workPara.style.display = "block" ;
 }
+
+// scroll effect on to-top button
+
+function backTop() {
+    if (document.documentElement.scrollTop > 450) {
+        toTop.classList.add('Show')
+    }
+
+    else {
+        toTop.classList.remove('Show')
+    }
+}
+
+window.addEventListener("scroll" , backTop)
+
 
 
 // a lot of repeat in this code 
