@@ -292,7 +292,7 @@ nav .container .Bar-content:hover .Drop-ul {
     background-color: var(--secondColor);
 }
 
-.to-top {
+#to-top {
     font-size: 30px;
     color: var(--secondColor);
     position: fixed;
@@ -301,12 +301,19 @@ nav .container .Bar-content:hover .Drop-ul {
     opacity: 0.7;
     transition: 0.3s;
     z-index: 99;
+    animation: go-top 0.4s infinite ;
+    display: none;
 }
 
-.to-top:hover {
+#to-top:hover {
     opacity: 1;
     transform: scale(1.1);
 }
+
+#to-top.Show {
+    display: block;
+}
+
 
 @media (max-width : 880px) {
     .Skills .container > div {
