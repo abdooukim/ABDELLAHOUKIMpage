@@ -19,7 +19,7 @@ ul {
 
 a , a:visited {
     text-decoration: none;
-    color: black;
+    color: inherit;
 }
 
 .container {
@@ -53,9 +53,11 @@ a , a:visited {
 
 nav {
     width: 100%;
-    background-color: var(--mainColor);
+    background-color: rgba(0, 0, 0, 0.596);
     position: fixed;
     z-index: 500;
+    color: #FFF;
+    transition: 0.4s;
 }
 
 nav .container {
@@ -64,15 +66,8 @@ nav .container {
     align-items: center;
 }
 
-nav .container .Logo {
-    font-weight: 700;
-    color: var(--Color);
-    cursor: pointer;
-}
-
-nav .container .Logo span {
-    color: var(--secondColor);
-    font-family: 'Saira Condensed', sans-serif;
+nav .container .Logo img {
+    width: 80px;
 }
 
 nav .container ul {
@@ -86,8 +81,12 @@ nav .container ul li {
     cursor: pointer;
 }
 
+nav .container ul li a {
+    transition: 0.3s;
+}
+
 nav .container ul li a:hover {
-    color: var(--Color) ;
+    opacity: 0.6;
 }
 
 nav .container .Bar-content {
@@ -128,6 +127,13 @@ nav .container .Bar-content .Drop-ul li:hover {
 
 nav .container .Bar-content:hover .Drop-ul {
     display: flex;
+}
+
+
+nav.change {
+    background-color: var(--mainColor);
+    color: #000;
+    transition: 0.4s;
 }
 
 @media (max-width : 600px) {
@@ -303,6 +309,7 @@ nav .container .Bar-content:hover .Drop-ul {
     z-index: 99;
     animation: go-top 0.4s infinite ;
     display: none;
+    transition: 0.3s;
 }
 
 #to-top:hover {
@@ -312,6 +319,7 @@ nav .container .Bar-content:hover .Drop-ul {
 
 #to-top.Show {
     display: block;
+    transition: 0.3s;
 }
 
 
