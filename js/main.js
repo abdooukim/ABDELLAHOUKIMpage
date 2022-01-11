@@ -8,7 +8,8 @@ let projBtn3 = document.getElementById('btn-project3')
 let msg3 = document.getElementById("msg3") ;
 let servBtn = document.getElementById("Getbtn") ;
 let workPara = document.getElementById("Work-text") ;
-let toTop  = document.getElementById("to-top")
+let toTop  = document.getElementById("to-top") ;
+let nav = document.querySelector("nav")
 
 // Show more
 function showMore() {
@@ -49,7 +50,7 @@ servBtn.onclick =()=> {
 // scroll effect on to-top button
 
 function backTop() {
-    if (document.documentElement.scrollTop > 450) {
+    if (document.documentElement.scrollTop > 650) {
         toTop.classList.add('Show')
     }
 
@@ -60,6 +61,21 @@ function backTop() {
 
 window.addEventListener("scroll" , backTop)
 
+// scroll effect on Nav bar
+
+function changeNav() {
+    if (document.documentElement.scrollTop > 50) {
+        nav.classList.add('change')
+    }
+
+    else {
+        nav.classList.remove('change')
+    }
+}
+
+window.addEventListener("scroll" , changeNav)
 
 
-// a lot of repeat in this code 
+
+
+// a lot of repeatition in this code 
